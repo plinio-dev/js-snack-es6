@@ -23,16 +23,19 @@ let biciclette = [
 let biciLeggera = biciclette[0];
 
 for (var i = 0; i < biciclette.length; i++) {
-  if (biciclette[i].peso < biciLeggera[0]) {
+  if (biciclette[i].peso > biciLeggera[0]) {
     biciLeggera = biciclette[i];
   }
 
 }
+
 
 let string = 'atala';
 let stringtwo = 6000;
 
 const {nome, peso} = biciLeggera;
 
+// destructuring
 console.log(nome, peso);
-console.log(`${string}  ${6000}`) ;
+// template literal
+console.log(`la bici più leggere si chiama ${string} e pesa ${6000}`) ;
