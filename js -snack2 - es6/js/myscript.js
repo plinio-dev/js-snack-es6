@@ -8,7 +8,7 @@
 // 1 Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 
-var squadre = [
+const squadre = [
   {
   'nome' : 'Roma',
   'pFatti' : 0,
@@ -52,13 +52,15 @@ for (var i = 0; i < squadre.length; i++) {
 // 3 step:
 // // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
-var array2 = [];
+const array2 = [];
 
 
 for (var i = 0; i < squadre.length; i++) {
+  const {nome, fSubiti} = squadre[i];
+
   array2.push({
-    nome: squadre[i].nome,
-    fSubiti : squadre[i].fSubiti
+    nome,
+    fSubiti
   });
 }
 
